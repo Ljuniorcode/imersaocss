@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace, 'Roboto', sans-serif;
+}
+
+body{
+   background-image: url('../img/fundo.jpg');
+   background-size: auto 100vh;
+   height: 100vh;
+   font-size: 16px;
+}
+/*menos de 400px vai carregar esses estilos*/
+@media (min-width: 400px) {
+    body{
+        font-size:14px;
+    }
+}
+
+/*breakpoints*/
+@media (min-width: 600px) {
+    body{
+        font-size: 18px;
+    }
+}
+
+/*breakpoints
+@media (min-width: 1200px) {
+    body{
+        font-size: 20px;
+        background-color: orange;
+        background-image: none;
+    }
+}
+*/
+header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    background-color:white;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li{
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 1s, color 1s;
+}
+
+.menu a:active,
+.menu a:hover{
+    background-color: teal;
+    color: white;
+}
+
+
+a {
+    color:black;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+/*v--- animações --- */
+/* .titulo{
+    transform:scale(0.2) translateY(50vh);
+    opacity: 0;
+    animation: linear 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+    0% {
+        transform:scale(0.2) translateY(50vh);
+        opacity: 0;    
+    }
+    100% {
+        transform:scale(1) translateY(0);
+        opacity: 1;
+    }
+} */
+
+.site-title, .site-subtitle{
+    color:whitesmoke;
+    text-align: center;
+}
+
+.site-title{
+    font-size: 4em;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.site-subtitle {
+    font-style:italic;
+    line-height: 1.8em;
+}
+
+.contato,
+.portfolio {
+    padding: 2em;
+    min-height: 100vh;
+}
+
+.contato h2,
+.portfolio h2{
+    font-size: 2em;
+    color: whitesmoke;
+    font-family: 'Source Code Pro';
+    margin-bottom: 1.5em;
+    
+}
+
+.portfolio .grid{
+    display: grid;
+    gap: 2em;
+}
+
+@media (min-width: 560px) {
+    .portfolio .grid{
+        grid-template-columns: 240px 240px;
+    }  
+}
+
+@media (min-width: 780px) {
+    .portfolio .grid{
+        grid-template-columns: repeat(3,240px);
+        justify-content: center;
+        align-content: center;
+        height: 40vh;
+        height: calc(100vh - 48px - 8em);
+    }  
+}
+
+.portfolio figure{
+    text-align: center;
+}
+
+.img-portfolio{
+    height: 180px;
+    width: 240px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 500ms;
+}
+
+.img-portfolio:hover{
+    transform: scale(1.1);
+}
+
+.contato .icons{
+    text-align: center;
+}
+
+.contato a{
+    color: whitesmoke;
+    font-size: 4em;
+    transition: text-shadow 1s;
+}
+
+.contato a:active,
+.contato a:hover{
+    text-decoration: none;
+    text-shadow: 0px 0px 8px rgba(255,255,255,0.5);
+}
+
+figcaption{
+    color:white;
+    font-size: 19px;
+}
+
+@media (min-width:1200px){
+    .img-portfolio{
+        height: auto;
+        width: 100%;
+    }
+    
+}

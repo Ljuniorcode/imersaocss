@@ -5,24 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6d6952c5be.js" crossorigin="anonymous"></script>
     <title>luccode</title>
 </head>
 <body>
     <header>
         <nav class="menu">
            <ul>
-               <li><a href="#">Sobre</a></li>
-               <li><a href="#">Projetos</a></li>
-               <li><a href="#">Contato</a></li>
+               <li><a href="#sobre">Sobre</a></li>
+               <li><a href="#portfolio">Projetos</a></li>
+               <li><a href="#contato">Contato</a></li>
            </ul>
         </nav>
-        <div>
+        <div class="titulo">
             <h1 class="site-title">Luciano Junior</h1>
             <h2 class="site-subtitle">Front-End Developer</h2>
         </div>
     </header>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <h2>Projetos</h2>
         <div class="grid">
           <figure>
@@ -49,7 +50,22 @@
             <img class="img-portfolio" src="./img/equipe.jpg" alt="equipe">
             <figcaption>Equipe</figcaption>
           </figure>
-          
+        </div>
+      </section>
+      <section id="contato" class="contato">
+        <h2>Contato</h2>
+        <div class="grid icons">
+          <a target="_blank" href="https://github.com/Ljuniorcode">
+          <i class="fab fa-github"></i>
+          </a>
+
+          <a target="_blank" href="https://www.linkedin.com/in/luciano-junior-dev/">
+            <i class="fab fa-linkedin"></i>
+          </a>
+
+          <a target="_blank" href="mailto:lucianojuniorarl@gmail.com">
+            <i class="far fa-envelope"></i>
+          </a>
         </div>
       </section>
 </body>
